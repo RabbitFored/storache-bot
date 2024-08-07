@@ -30,8 +30,8 @@ async def doc(client, message):
   key = encrypt_file_id(forwarded_msg.id)
 
   
-  url = f"https://telegram.dog/{BotUsername}?start=theostrich_{(str(key))}"
+  url = f"https://telegram.dog/{BotUsername}?start=storacheBot_{(str(key))}"
   btn = f"[Get file](url::{url})"
   keyboard = generate_keyboard(btn)
 
-  await editable.reply(url, reply_markup=keyboard)
+  await editable.edit(url, reply_markup=keyboard)
