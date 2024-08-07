@@ -61,12 +61,12 @@ subscriptions:
 filters:
   accept_tc: true
   ban: true
-  force_sub:
-      chats: 
-         - "@theostrich"
-  antiflood:
-      message_interval: 5
-      message_count: 5
+  #force_sub:
+    #  chats: 
+      #   - "@theostrich"
+  #antiflood:
+     # message_interval: 5
+      #message_count: 5
   disallow: #restrict these users from accessing bot
      users: []
      groups: []
