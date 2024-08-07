@@ -68,8 +68,8 @@ async def user_check(_, c, msg):
   user_pass = False
   
 
-  if bool(CONFIG.settings["fliters"]["force_sub"]):
-    chat = CONFIG.settings["fliters"]["force_sub"].get("chats")[0]
+  if bool(CONFIG.settings["filters"]["force_sub"]):
+    chat = CONFIG.settings["filters"]["force_sub"].get("chats")[0]
     try:
       await c.get_chat_member(chat, userID)
       user_pass = True
