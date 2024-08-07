@@ -22,7 +22,7 @@ def decrypt_file_id(encrypted_file_id):
 async def start(client, message):
     
     
-    print(message.command)
+    #print(message.command)
     key = message.text.split("_")[-1]
 
     if key == "/start":   
@@ -37,9 +37,11 @@ async def start(client, message):
     )
     else:
          
-         
-         file_id = decrypt_file_id(key)
-         print(int(file_id))
+         try:
+          file_id = decrypt_file_id(key)
+         except:
+            await message.reply("File Not Found")
+         #print(int(file_id))
          await client.forward_messages(chat_id=message.from_user.id,
                                       from_chat_id=chat,
                                       message_ids=int(file_id))
