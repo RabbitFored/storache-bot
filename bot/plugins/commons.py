@@ -5,17 +5,6 @@ from bot.core.utils import generate_keyboard
 from bot.core import database as db, filters as fltr
 
 
-@Client.on_message(fltr.cmd(["start"]))
-async def start(client, message):
-    text = strings.get("start_txt", user=message.from_user.mention)
-    keyboard = generate_keyboard(strings.get("start_btn"))
-
-    await message.reply_text(
-        text,
-        disable_web_page_preview=True,
-        reply_markup=keyboard,
-        quote=True,
-    )
 
 
 @Client.on_message(filters.command(["help"]))

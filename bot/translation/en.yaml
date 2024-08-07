@@ -12,14 +12,18 @@ authors:
 #commons
 start_txt: |-
    **Hello {user} 👋 !
-   I am a simple Telegram Bot.\n
+   I am a simple Storache Bot  - A Powerful bot to store all your things safe
+   
    Hit /help to know more on using me.**
+
 start_btn: |-
    [HELP](data::ct_help)
 
 help_txt: |-
    **Here is an detailed guide on using me.**
 
+   Forward or send me any media as a document file to keep safe and I will provide you a permanent URL to access the file anytime at telegram.
+   
    **Available Commands:**
    /start : Check if I am alive
    /help : Send you this text!
@@ -35,7 +39,7 @@ admin_help_txt: |-
 
 about_txt: |+
    **About Me :**
-   \n  - **Name**      : Telegram-Bot
+   \n  - **Name**      : Storache
    \n  - **Creator**   : @theostrich
    \n  - **Language**  : Python 3
    \n  - **Library**   : [Pyrogram](https://pyrogram.org/)
