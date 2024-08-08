@@ -1,6 +1,7 @@
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 from pyrogram import Client, filters
+from pyrogram.errors import FloodWait
 
 from bot import strings
 from bot.core.utils import generate_keyboard
@@ -41,7 +42,12 @@ async def start(client, message):
           file_id = decrypt_file_id(key)
          except:
             await message.reply("File Not Found")
-         #print(int(file_id))
-         await client.forward_messages(chat_id=message.from_user.id,
+            return
+         try:
+            await client.forward_messages(chat_id=message.from_user.id,
                                       from_chat_id=chat,
                                       message_ids=int(file_id))
+         except FloodWait as e:
+             await message.reply_text(f"A floodwait of {e.value} seconds is required. Please try again later.")
+            
+             
