@@ -53,7 +53,6 @@ subscriptions:
         validity: "1,month"
       - price: "200,xtr"
         validity: "3,month"
-
     limits:
       max_mails: 10
       custom_domains: true
@@ -72,8 +71,8 @@ filters:
      users: []
      groups: []
   exclude: #dont check for these users
-     groups: ["admin"]
-     subscriptions: ["premium"]
+     groups: []
+     subscriptions: []
 
 broadcast:
   users: all    #no. of users to send the message to
