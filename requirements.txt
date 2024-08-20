@@ -9,3 +9,5 @@ regex
 python-dotenv
 pycryptodome
 motor
+cachetools
+
