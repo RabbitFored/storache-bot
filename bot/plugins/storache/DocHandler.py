@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 
 from bot import CONFIG
 from bot.core.utils import generate_keyboard
-
+from bot.core import database as db
 from . import base62, chat, iv, key
 
 
@@ -35,3 +35,4 @@ async def doc(client, message):
   keyboard = generate_keyboard(btn)
 
   await editable.edit(url, reply_markup=keyboard)
+  await db.inc_stat("files", 1)
